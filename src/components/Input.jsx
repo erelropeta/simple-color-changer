@@ -1,6 +1,6 @@
 import './input.css';
 
-const Input = () => {
+const Input = ({ handleChangeInput }) => {
   return (
     <form className="form">
       <label htmlFor=""></label>
@@ -9,6 +9,8 @@ const Input = () => {
         id="colorInput"
         type="text"
         placeholder="Add color name"
+        onChange={(e) => handleChangeInput(e.target.value)}
+        autoFocus
       />
     </form>
   );
